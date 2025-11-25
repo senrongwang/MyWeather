@@ -30,6 +30,7 @@ import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.bytedance.myweather.data.Cast
@@ -146,13 +147,15 @@ fun DayNightInfoCard(isDay: Boolean, cast: Cast) {
                 fontWeight = FontWeight.Bold
             )
             Spacer(modifier = Modifier.height(16.dp))
-            Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceBetween) {
+            Row(modifier = Modifier.fillMaxWidth()) {
                 Text(
+                    modifier = Modifier.weight(1f),
                     text = "天气\n温度\n风力",
                     color = Color.White.copy(alpha = 0.8f),
                     lineHeight = 24.sp
                 )
                 Text(
+                    modifier = Modifier.weight(1f),
                     text = if (isDay) {
                         "${cast.dayweather}\n${cast.daytemp}°\n${cast.daywind}风 ${cast.daypower}级"
                     } else {
@@ -160,7 +163,8 @@ fun DayNightInfoCard(isDay: Boolean, cast: Cast) {
                     },
                     color = Color.White,
                     fontWeight = FontWeight.Bold,
-                    lineHeight = 24.sp
+                    lineHeight = 24.sp,
+                    textAlign = TextAlign.End
                 )
             }
         }
