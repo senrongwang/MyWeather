@@ -89,7 +89,7 @@ fun WeatherScreen(viewModel: WeatherViewModel, onNavigateToToday: () -> Unit) {
                 Column(
                     modifier = Modifier
                         .weight(1f)
-                        .padding(20.dp),
+                        .padding(horizontal = 20.dp),
                     horizontalAlignment = Alignment.CenterHorizontally
                 ) {
                     Text(
@@ -153,10 +153,10 @@ fun ForecastItem(cast: Cast) {
             modifier = Modifier
                 .padding(16.dp)
                 .fillMaxWidth(),
-            verticalAlignment = Alignment.CenterVertically,
-            horizontalArrangement = Arrangement.SpaceBetween
+            verticalAlignment = Alignment.CenterVertically
         ) {
-            Column {
+            // Date Column
+            Column(modifier = Modifier.weight(1f)) {
                 Text(
                     text = getDayOfWeek(cast.date),
                     color = Color.White,
@@ -169,7 +169,12 @@ fun ForecastItem(cast: Cast) {
                     fontSize = 12.sp
                 )
             }
-            Row(verticalAlignment = Alignment.CenterVertically) {
+            // Weather Icon & Text
+            Row(
+                modifier = Modifier.weight(1f),
+                verticalAlignment = Alignment.CenterVertically,
+                horizontalArrangement = Arrangement.Center
+            ) {
                 Icon(
                     imageVector = Icons.Filled.WbCloudy,
                     contentDescription = cast.dayweather,
@@ -183,7 +188,8 @@ fun ForecastItem(cast: Cast) {
                     fontSize = 15.sp,
                 )
             }
-            Row {
+            // Temperature
+            Row(modifier = Modifier.weight(1f), horizontalArrangement = Arrangement.End) {
                 Text(
                     text = "${cast.daytemp}°",
                     color = Color.White,
