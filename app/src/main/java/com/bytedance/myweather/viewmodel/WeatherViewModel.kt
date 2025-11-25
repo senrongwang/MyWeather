@@ -18,7 +18,7 @@ class WeatherViewModel : ViewModel() {
 
     private val cityCodes = mapOf(
         "北京" to "110101",
-        "上海" to "310000",
+        "武汉" to "420100",
         "广州" to "440100",
         "深圳" to "440300"
     )

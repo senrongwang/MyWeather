@@ -33,7 +33,7 @@ fun BottomBar(
     onNavigateToToday: () -> Unit,
     isTodayScreen: Boolean
 ) {
-    val cities = listOf("北京", "上海", "广州", "深圳")
+    val cities = listOf("北京", "武汉", "广州", "深圳")
 
     Column(horizontalAlignment = Alignment.CenterHorizontally, modifier = Modifier.padding(bottom = 20.dp, top = 10.dp)) {
         Row(horizontalArrangement = Arrangement.spacedBy(10.dp)) {
