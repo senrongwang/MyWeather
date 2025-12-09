@@ -1,5 +1,6 @@
 package com.bytedance.myweather.ui.today
 
+import android.R
 import android.content.Intent
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -33,6 +34,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import com.bytedance.myweather.data.Cast
 import com.bytedance.myweather.ui.common.BottomBar
 import com.bytedance.myweather.ui.forecast.MainActivity
@@ -40,9 +42,11 @@ import com.bytedance.myweather.ui.theme.MyWeatherTheme
 import com.bytedance.myweather.viewmodel.WeatherViewModel
 
 class TodayWeatherActivity : ComponentActivity() {
+
     private val weatherViewModel: WeatherViewModel by viewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        installSplashScreen()
         super.onCreate(savedInstanceState)
         setContent {
             MyWeatherTheme {

@@ -2,4 +2,16 @@
 <resources>
 
     <style name="Theme.MyWeather" parent="android:Theme.Material.Light.NoActionBar" />
+
+<!--    &lt;!&ndash; 新建一个专门用于启动页的主题 &ndash;&gt;-->
+<!--    <style name="Theme.App.Starting" parent="Theme.SplashScreen">-->
+<!--        &lt;!&ndash; 关键：设置启动窗口的背景为我们刚刚创建的渐变 Drawable &ndash;&gt;-->
+<!--        <item name="windowSplashScreenBackground">@color/pink_80</item>-->
+<!--        &lt;!&ndash;        <item name="windowSplashScreenBackground">@drawable/launch_gradient</item>&ndash;&gt;-->
+<!--        &lt;!&ndash; 移除启动图标 &ndash;&gt;-->
+<!--        <item name="windowSplashScreenAnimatedIcon">@android:color/transparent</item>-->
+
+<!--        &lt;!&ndash; 启动画面结束后要应用的主题 &ndash;&gt;-->
+<!--        <item name="postSplashScreenTheme">@style/Theme.MyWeather</item>-->
+<!--    </style>-->
 </resources>
